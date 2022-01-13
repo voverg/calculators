@@ -56,3 +56,9 @@ footer a {
 footer a:hover {
     color: #eae38b;
 }
+
+@media (max-width: 720px) {
+  header {
+    font-size: .8rem;
+  }
+}

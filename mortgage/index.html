@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Простой ипотечный калькулятор для сайта">
+  <meta name="keywords" content="mortgage calculator site">
+  <!-- <meta name="og:image" content="social-img.jpg"> -->
+  <title>Ипотечный калькулятор</title>
+  <link rel="shortcut icon" href="../main/budget.png" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /> -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Ипотечный калькулятор</h1>
+    <p>Помогает рассчитать ипотечные выплаты по сумме, времени займа и процентной ставке</p>
+  </header>
+
+  <div class="container">
+    <div class="calc">
+      <h2 class="calc__header">Рассчитайте ипотеку</h2>
+      <div class="calc__body">
+
+        <div class="calc__form">
+          <div class="form__conditions">
+            <label for="cost" class="label">Стоимость недвижимости</label>
+            <input type="number" id="cost" class="input condition" min="0" placeholder="0" autofocus>
+
+            <label for="initial-pay" class="label">Первоначальный взнос</label>
+            <input type="number" id="initial-pay" class="input condition" min="0" placeholder="0">
+
+            <label for="credit-term" class="label">Срок кредита</label>
+            <input type="number" id="credit-term" class="input condition" min="0" placeholder="0">
+          </div>
+
+          <h3 class="form__banks-header">Выбрать банк</h3>
+
+          <div class="form__banks">
+            <input type="radio" id="sber-bank" name="bank" class="bank" value="8.7" checked>
+            <label for="sber-bank" class="bank-label">
+              <span class="bank-name">Сбербанк</span><span class="bank-rate">8.7</span>
+            </label>
+
+            <input type="radio" id="alfa-bank" name="bank" class="bank" value="5.6">
+            <label for="alfa-bank" class="bank-label">
+              <span class="bank-name">Альфа банк</span><span class="bank-rate">5.6</span>
+            </label>
+
+            <input type="radio" id="vtb-bank" name="bank" class="bank" value="7.4">
+            <label for="vtb-bank" class="bank-label">
+              <span class="bank-name">ВТБ банк</span><span class="bank-rate">7.4</span>
+            </label>
+
+            <input type="radio" id="tinkoff-bank" name="bank" class="bank" value="6.6">
+            <label for="tinkoff-bank" class="bank-label">
+              <span class="bank-name">Тинькофф банк</span><span class="bank-rate">6.6</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="calc__result">
+          <div class="label">Сумма кредита</div>
+          <div class="result" id="credit-sum"><span class="result-value">0</span> руб.</div>
+
+          <div class="label">Ежемесячный платёж</div>
+          <div class="result" id="monthly-pay"><span class="result-value">0</span> руб.</div>
+
+          <div class="label">Рекомендуемый доход</div>
+          <div class="result" id="recommended-income"><span class="result-value">0</span> руб.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Created by <a href="https://github.com/voverg" rel="noopener noreferrer" target="_blank">Voverg</a></p>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
