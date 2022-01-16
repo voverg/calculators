@@ -132,8 +132,26 @@ footer a:hover {
   color: #eae38b;
 }
 
-@media (max-width: 720px) {
+
+@media (max-width: 760px) {
   header {
     font-size: .8rem;
+  }
+
+  .calc {
+    max-width: 100%;
+  }
+
+  .calc__body {
+    gap: 10px;
+  }
+
+  .calc__form {
+    min-width: 40%;
+    max-width: 60%;
+  }
+
+  .input, .bank-label {
+    width: 95%;
   }
 }
