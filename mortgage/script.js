@@ -28,6 +28,10 @@ function handleConditions(event) {
       break;
     case 'initial-pay':
       initialPay = +target.value;
+      if (initialPay >= cost) {
+        target.value = cost;
+        initialPay = cost;
+      }
       break;
     case 'credit-term':
       creditTerm = +target.value || 1;
