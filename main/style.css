@@ -35,7 +35,43 @@ header {
 .container {
     flex-grow: 1;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+  width: 20%;
+  padding: 15px;
+}
+
+.card__link {
+  display: block;
+  text-decoration: none;
+  font-size: .7rem;
+  color: var(--blue);
+  box-shadow: 0 0 20px -5px var(--blue);
+  transition: opacity .3s ease-in, color .3s ease-in;
+}
+.card__link:hover {
+  color: steelblue;
+  opacity: .8;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__title {
+  padding: 5px;
+  text-align: center;
+}
+
+
 
 footer {
     flex-shrink: 0;
@@ -55,4 +91,10 @@ footer a {
 }
 footer a:hover {
     color: #eae38b;
+}
+
+@media (max-width: 760px) {
+  .card {
+    width: 100%;
+  }
 }

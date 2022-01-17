@@ -9,7 +9,7 @@ let initialPay = 0;
 let creditTerm = 12;
 let bankRate = +$calc.querySelector('input[type="radio"]:checked').value;
 
-// Work with output data
+// Output elements
 const $creditSum = $calc.querySelector('#credit-sum > .result-value');
 const $bankPersent = $calc.querySelector('#bank-persent > .result-value');
 const $totalPay = $calc.querySelector('#total-pay > .result-value');
@@ -21,7 +21,6 @@ function handleConditions(event) {
   const target = event.target;
   if (!target.classList.contains('condition')) return;
 
-  // console.log(+target.value, target.id);
   switch (target.id) {
     case 'cost':
       cost = +target.value;

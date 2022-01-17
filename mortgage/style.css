@@ -116,6 +116,7 @@ header {
   font-weight: bold;
   color: var(--blue);
 }
+/*End of calculator*/
 
 footer {
   flex-shrink: 0;
